@@ -19,18 +19,17 @@
   min-block-size: 100dvb;
   margin: 0 auto;
   background-color: var(--Themes-mainColor);
-  background-image: repeating-linear-gradient(to right, var(--Themes-background) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--Themes-background) 0 2px, transparent 2px 4px);
+  background-image: var(--background-image);
+  background-size: cover;
 }
 
 .header {
   background: var(--Themes-background);
   color: var(--Themes-mainColor);
-  min-height: 323px;
   padding-block-start: 120px;
   display: flex;
   flex-direction: column;
   font-family: "PressStart2P";
-  font-size: 14px;
   border: 2px solid var(--Themes-mainColor);
   text-transform: uppercase;
   margin-block-end: 100px;
@@ -40,13 +39,14 @@
 .header h1 {
   font-size: 49px;
   align-self: center;
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
   margin-block-end: 20px;
 }
 
 .header h2 {
   align-self: center;
   margin-block-end: 24px;
-  font-size: 14px;
+  font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
 }
 
 .theme-menu {
@@ -58,6 +58,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-size: 14px;
   margin-block-end: 24px;
   margin-inline-start: 20px;
 }
@@ -308,6 +309,10 @@
   animation: sparks forwards 0.3s 0.3s alternate ease-in;
 }
 
+.like-icon .main-body, .core {
+  transition: 0.1s;
+}
+
 .heart {
   transform-origin: center;
 }
@@ -317,7 +322,7 @@
 }
 
 .dialog-section {
-  padding: 51px 0 102px 0;
+  padding-bottom: 102px;
   display: flex;
   justify-content: center;
   background-color: transparent;
@@ -369,7 +374,7 @@ dialog::backdrop {
   align-items: center;
   gap: 8px;
   block-size: 84px;
-  inline-size: 309px;
+  min-inline-size: 308px;
   position: relative;
   background-color: transparent;
   color: var(--Themes-mainColor);
@@ -380,4 +385,34 @@ dialog::backdrop {
   width: 28px;
   mix-blend-mode: difference;
   color: var(--Themes-background);
+}
+
+@media(width>=696px) {
+  .page {
+    max-inline-size: 696px;
+  }
+  .header {
+    padding-block-start: 136px;
+  }
+  .image {
+    height: 696px;
+    border-inline-start: none;
+    border-inline-end: none;
+  }
+  .save_button {
+    flex-direction: row;
+    min-inline-size: 335px;
+  }
+  .floppy {
+    height: 22px;
+    width: 22px;
+  }
+  .watermark {
+    inset-block-start: 26px;
+    inset-inline-end: 24px;
+  }
+  .save_button {
+    block-size: 55px;
+    min-inline-size: 335px;
+  }
 }

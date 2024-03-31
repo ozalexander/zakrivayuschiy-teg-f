@@ -11,6 +11,19 @@
         --Themes-background: #000;
         --font-title: 'wght' 785;
         --font-p: 'wght' 465;
+        --background-image: repeating-linear-gradient(to right, var(--Themes-background) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--Themes-background) 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
+
+        .button span {
+            filter: invert(43%) sepia(84%) saturate(1175%) hue-rotate(92deg) brightness(105%) contrast(105%);
+        }
+
+        .watermark {
+            -webkit-text-stroke-width: 0;
+            -webkit-text-stroke-color: transparent;
+        }
+        .floppy {
+            color: var(--Themes-mainColor);
+        }
     }
 }
 
@@ -21,6 +34,14 @@
     --font-p: 'wght' 400;
     --control: #000;
     --control-blend: #FFF;
+    --background-image: repeating-linear-gradient(to right, var(--Themes-background) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--Themes-background) 0 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    
+    .button span {
+        filter: none;
+    }
+    .floppy {
+        color: var(--control-blend);
+    }
 }
 
 .theme-dark {
@@ -30,6 +51,7 @@
     --font-p: 'wght' 465;
     --control: #00CC14;
     --control-blend: #000;
+    --background-image: repeating-linear-gradient(to right, var(--Themes-background) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--Themes-background) 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
 
     .button span {
         filter: invert(43%) sepia(84%) saturate(1175%) hue-rotate(92deg) brightness(105%) contrast(105%);
@@ -37,5 +59,10 @@
 
     .floppy {
         color: var(--Themes-mainColor);
+    }
+
+    .watermark {
+        -webkit-text-stroke-width: 0;
+        -webkit-text-stroke-color: transparent;
     }
 }
