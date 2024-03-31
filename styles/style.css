@@ -125,6 +125,7 @@
   font-size: inherit;
   min-block-size: 31px;
   padding: 4px 10px 5px 10px;
+  font-variation-settings: var(--font-title);
 }
 
 .double_str_title {
@@ -136,6 +137,7 @@
   padding: 26px 25px 25px 25px;
   display: flex;
   flex-direction: column;
+  font-variation-settings: var(--font-p);
   gap: 27px;
   line-height: 21px;
   position: relative;
@@ -320,18 +322,10 @@
 dialog {
   width: 341px;
   height: 195px;
-  position: fixed;
-  inset: 0;
   background-color: var(--Themes-background);
-  transition: opacity 0.3s .3s ease-in-out;
   padding: 32px 37px;
-  display: grid;
 }
 
-dialog:not([open]) {
-  pointer-events: none;
-  opacity: 0;
-} 
 
 .dialog-content {
   gap: 20px;
@@ -382,49 +376,4 @@ dialog::backdrop {
   width: 28px;
   mix-blend-mode: difference;
   color: var(--Themes-background);
-}
-
-@media(width>=696px) {
-  .page {
-    max-inline-size: 696px;
-  }
-  .image {
-    height: 696px;
-    border-inline-start: none;
-    border-inline-end: none;
-  }
-  .save_button {
-    flex-direction: row;
-    min-inline-size: 335px;
-  }
-}
-
-@keyframes arrow {
-  from {
-    inset-inline-start: -15px;
-  }
-  to {
-    inset-inline-start: -11px;
-  }
-}
-
-@keyframes heart {
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparks {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1
-  }
 }

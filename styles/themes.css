@@ -8,22 +8,22 @@
 .theme-light {
     --Themes-mainColor: #000;
     --Themes-background: #FFF;
-    --heart_contour:#000;
-    --heart_sparks: red;
+    --font-title: 'wght' 700;
+    --font-p: 'wght' 400;
 }
 
 .theme-dark {
     --Themes-mainColor: #00CC14;
     --Themes-background: #000;
-    --heart_contour:#000;
-    --heart_sparks: red;
+    --font-title: 'wght' 785;
+    --font-p: 'wght' 465;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --Themes-mainColor: #00CC14;
         --Themes-background: #000;
-        --heart_contour:#000;
-        --heart_sparks: red;
+        --font-title: 'wght' 785;
+        --font-p: 'wght' 465;
     }
 }

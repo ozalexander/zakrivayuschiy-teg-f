@@ -12,3 +12,49 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@media(width>=696px) {
+    .page {
+      max-inline-size: 696px;
+    }
+    .image {
+      height: 696px;
+      border-inline-start: none;
+      border-inline-end: none;
+    }
+    .save_button {
+      flex-direction: row;
+      min-inline-size: 335px;
+    }
+  }
+  
+  @keyframes arrow {
+    from {
+      inset-inline-start: -15px;
+    }
+    to {
+      inset-inline-start: -11px;
+    }
+  }
+  
+  @keyframes heart {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes sparks {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1
+    }
+  }
+  
