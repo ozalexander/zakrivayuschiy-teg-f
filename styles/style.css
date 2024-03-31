@@ -212,7 +212,7 @@
 .button {
   font-family: 'PressStart2P';
   font-size: 14px;
-  color: var(--Themes-background);
+  color: var(--control);
   outline: none;
   background-size: 200%;
   background-image: linear-gradient(to right, var(--Themes-background) 50%, var(--Themes-mainColor) 50%);
@@ -229,7 +229,7 @@
 }
 
 .button span {
-  color: var(--Themes-background);
+  color: var(--control-blend);
   mix-blend-mode: difference;
 }
 
@@ -249,6 +249,10 @@
 .card__icon-button:focus-visible {
   border: 2px solid var(--Themes-mainColor);
   transition: 0.3s ease;
+}
+
+.contour {
+  fill: var(--Themes-mainColor);
 }
 
 .main-body {

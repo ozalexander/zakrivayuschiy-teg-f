@@ -19,6 +19,8 @@
     --Themes-background: #FFF;
     --font-title: 'wght' 700;
     --font-p: 'wght' 400;
+    --control: #000;
+    --control-blend: #FFF;
 }
 
 .theme-dark {
@@ -26,4 +28,14 @@
     --Themes-background: #000;
     --font-title: 'wght' 785;
     --font-p: 'wght' 465;
+    --control: #00CC14;
+    --control-blend: #000;
+
+    .button span {
+        filter: invert(43%) sepia(84%) saturate(1175%) hue-rotate(92deg) brightness(105%) contrast(105%);
+    }
+
+    .floppy {
+        color: var(--Themes-mainColor);
+    }
 }
