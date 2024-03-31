@@ -42,4 +42,12 @@
       opacity: 1
     }
   }
-  
+
+  @keyframes dialog {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
