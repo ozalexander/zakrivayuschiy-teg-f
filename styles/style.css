@@ -111,7 +111,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  font-family: 'Inter-Variable', sans-serif;
+  font-family: "Inter-Variable", sans-serif;
   font-size: 18px;
 }
 
@@ -125,7 +125,7 @@
   font-size: inherit;
   min-block-size: 31px;
   padding: 4px 10px 5px 10px;
-  font-variation-settings:"wght" var(--font-title);
+  font-variation-settings: "wght" var(--font-title);
 }
 
 .double_str_title {
@@ -137,7 +137,7 @@
   padding: 26px 25px 25px 25px;
   display: flex;
   flex-direction: column;
-  font-variation-settings:"wght" var(--font-p);
+  font-variation-settings: "wght" var(--font-p);
   gap: 27px;
   line-height: 21px;
   position: relative;
@@ -188,18 +188,19 @@
   position: absolute;
   inset-block-start: 23px;
   inset-inline-end: 11px;
-  font-family: 'PressStart2P';
+  font-family: "PressStart2P";
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-size: 14px;
   text-shadow:
-    -1px 0 var(--Themes-background), 
-   0 1px var(--Themes-background), 
-   1px 0 var(--Themes-background), 
-   0 -1px var(--Themes-background);
+    -1px 0 var(--Themes-background),
+    0 1px var(--Themes-background),
+    1px 0 var(--Themes-background),
+    0 -1px var(--Themes-background);
 }
 
-@supports (text-stroke: 0.5px var(--Themes-background)) or (-webkit-text-stroke: 0.5px var(--Themes-background)) {
+@supports (text-stroke: 0.5px var(--Themes-background)) or
+  (-webkit-text-stroke: 0.5px var(--Themes-background)) {
   .watermark {
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: var(--Themes-background);
@@ -210,12 +211,16 @@
 }
 
 .button {
-  font-family: 'PressStart2P';
+  font-family: "PressStart2P";
   font-size: 14px;
   color: var(--control);
   outline: none;
   background-size: 200%;
-  background-image: linear-gradient(to right, var(--Themes-background) 50%, var(--Themes-mainColor) 50%);
+  background-image: linear-gradient(
+    to right,
+    var(--Themes-background) 50%,
+    var(--Themes-mainColor) 50%
+  );
   border: 2px solid var(--Themes-mainColor);
   transition: 0.5s ease-in-out;
 }
@@ -308,7 +313,8 @@
   animation: sparks forwards 0.3s 0.3s alternate ease-in;
 }
 
-.like-icon .main-body, .core {
+.like-icon .main-body,
+.core {
   transition: 0.1s;
 }
 
@@ -389,7 +395,7 @@ dialog::backdrop {
   color: var(--Themes-background);
 }
 
-@media(width>=696px) {
+@media (width>=696px) {
   .page {
     max-inline-size: 696px;
   }
