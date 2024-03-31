@@ -31,7 +31,7 @@
   padding-block-start: 120px;
   display: flex;
   flex-direction: column;
-  color: var(--Themes-mainColor, #000);
+  color: var(--Themes-mainColor);
   font-family: "PressStart2P";
   font-size: 14px;
   border: 2px solid var(--Themes-mainColor);
@@ -191,10 +191,19 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-size: 14px;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: var(--Themes-background);
+  text-shadow:
+    -1px 0 var(--Themes-background), 
+   0 1px var(--Themes-background), 
+   1px 0 var(--Themes-background), 
+   0 -1px var(--Themes-background);
 }
 
+@supports (text-stroke: 0.5px var(--Themes-background)) or (-webkit-text-stroke: 0.5px var(--Themes-background)) {
+  .watermark {
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--Themes-background);
+  }
+}
 .card__like-button {
   inline-size: 129px;
 }
@@ -251,10 +260,6 @@
   transition: 0.3s 0.03s;
 }
 
-.like-icon {
-  
-}
-
 .like-icon:hover .main-body {
   fill: var(--heart_contour);
   transition: 0.3s 0.05s;
@@ -306,11 +311,11 @@
   opacity: 0;
 }
 
-.footer {
+.dialog-section {
   padding: 51px 0 102px 0;
   display: flex;
   justify-content: center;
-  background-color: var(--Themes-background);
+  background-color: transparent;
 }
 
 dialog {
@@ -399,6 +404,7 @@ dialog::backdrop {
   from {
     inset-inline-start: -15px;
   }
+
   to {
     inset-inline-start: -11px;
   }
@@ -408,9 +414,11 @@ dialog::backdrop {
   from {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.5);
   }
+
   to {
     transform: scale(1);
   }
@@ -420,6 +428,7 @@ dialog::backdrop {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1
   }

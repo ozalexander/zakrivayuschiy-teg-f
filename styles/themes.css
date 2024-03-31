@@ -4,3 +4,26 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+.theme-light {
+    --Themes-mainColor: #000;
+    --Themes-background: #FFF;
+    --heart_contour:#000;
+    --heart_sparks: red;
+}
+
+.theme-dark {
+    --Themes-mainColor: #00CC14;
+    --Themes-background: #000;
+    --heart_contour:#000;
+    --heart_sparks: red;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --Themes-mainColor: #00CC14;
+        --Themes-background: #000;
+        --heart_contour:#000;
+        --heart_sparks: red;
+    }
+}

@@ -57,7 +57,7 @@
         </h3>
         <div class="image">
           <h4 class="watermark">
-            &lt/HTML&gt
+            &lt;/HTML&gt;
           </h4>
         </div>
         <article class="wrapper">
@@ -339,11 +339,10 @@
           </div>
         </article>
       </section>
-    </main>
-    <footer class="footer">
+    <section class="content dialog-section">
       <button class="save_button button" type="button" onclick="window['save'].showModal()" aria-controls="save">
         <svg class="floppy" viewBox="0 0 29 28">
-          <use href="./svg/floppy.svg#floppy">
+          <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span>
           Сохранить на память
@@ -352,7 +351,7 @@
       <dialog id="save">
         <div class="dialog-content">
           <svg class="floppy" viewBox="0 0 29 28">
-            <use href="./svg/floppy.svg#floppy">
+            <use href="./svg/floppy.svg#floppy"></use>
           </svg>
           <h2 class="dialog-text">
             Вставьте дискету, чтобы продолжить
@@ -364,7 +363,8 @@
             </span>
           </button>
       </dialog>
-    </footer>
+    </section>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
