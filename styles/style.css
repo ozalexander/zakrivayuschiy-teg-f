@@ -291,11 +291,15 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: ;
+  animation: heart forwards 0.3s 0.1s alternate ease-in;
 }
 
 .like-icon.is-liked .sparks {
-  animation: ;
+  animation: sparks forwards 0.3s 0.3s alternate ease-in;
+}
+
+.heart {
+  transform-origin: center;
 }
 
 .sparks {
@@ -309,11 +313,31 @@
   background-color: var(--Themes-background);
 }
 
-.dialog-content {
+dialog {
   width: 341px;
   height: 195px;
-  padding: 32px 42px;
+  position: fixed;
+  inset: 0;
   background-color: var(--Themes-background);
+  transition: opacity 0.3s .3s ease-in-out;
+  padding: 32px 37px;
+  display: grid;
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+} 
+
+.dialog-content {
+  gap: 20px;
+  display: flex;
+  height: 60px;
+}
+
+.dialog-content .floppy {
+  height: 39px;
+  width: 86px;
 }
 
 dialog::backdrop {
@@ -327,8 +351,13 @@ dialog::backdrop {
   font-size: 14px;
 }
 
-.dialog-button-text {
-  display: flex;
+.dialog-button {
+  width: 257px;
+  height: 38px;
+  position: relative;
+  background-color: transparent;
+  color: var(--Themes-mainColor);
+  margin-top: 30px;
 }
 
 .save_button {
@@ -376,9 +405,22 @@ dialog::backdrop {
 }
 
 @keyframes heart {
-
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes sparks {
-  
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
 }
