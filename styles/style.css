@@ -31,7 +31,6 @@
   padding-block-start: 120px;
   display: flex;
   flex-direction: column;
-  color: var(--Themes-mainColor);
   font-family: "PressStart2P";
   font-size: 14px;
   border: 2px solid var(--Themes-mainColor);
@@ -400,7 +399,7 @@ dialog::backdrop {
   }
 }
 
-@keyframes arrow { 
+@keyframes arrow {
   from {
     inset-inline-start: -15px;
   }
