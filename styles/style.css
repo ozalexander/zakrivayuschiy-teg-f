@@ -17,8 +17,6 @@
 .page {
   min-inline-size: 375px;
   min-block-size: 100dvb;
-  font-family: 'Inter-Variable', sans-serif;
-  font-size: 18px;
   margin: 0 auto;
   background-color: var(--Themes-mainColor);
   background-image: repeating-linear-gradient(to right, var(--Themes-background) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--Themes-background) 0 2px, transparent 2px 4px);
@@ -113,6 +111,8 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  font-family: 'Inter-Variable', sans-serif;
+  font-size: 18px;
 }
 
 .content {
