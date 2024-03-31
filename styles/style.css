@@ -125,7 +125,7 @@
   font-size: inherit;
   min-block-size: 31px;
   padding: 4px 10px 5px 10px;
-  font-variation-settings: var(--font-title);
+  font-variation-settings:"wght" var(--font-title);
 }
 
 .double_str_title {
@@ -137,7 +137,7 @@
   padding: 26px 25px 25px 25px;
   display: flex;
   flex-direction: column;
-  font-variation-settings: var(--font-p);
+  font-variation-settings:"wght" var(--font-p);
   gap: 27px;
   line-height: 21px;
   position: relative;
