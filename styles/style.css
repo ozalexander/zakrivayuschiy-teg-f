@@ -143,16 +143,16 @@
 }
 
 .image {
-  background-image: image-set(
-    url("../images/small_van.png") 1x,
-    url("../images/big_van.png") 2x);
-  background-repeat: no-repeat;
   min-height: 371px;
   border-inline-start: 2px solid var(--Themes-mainColor);
   border-inline-end: 2px solid var(--Themes-mainColor);
   height: calc(100vw - 4px);
-  background-size: contain;
   position: relative;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
 }
 
 .grayscale {
@@ -404,7 +404,6 @@ dialog::backdrop {
   from {
     inset-inline-start: -15px;
   }
-
   to {
     inset-inline-start: -11px;
   }
@@ -414,11 +413,9 @@ dialog::backdrop {
   from {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.5);
   }
-
   to {
     transform: scale(1);
   }
@@ -428,7 +425,6 @@ dialog::backdrop {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1
   }
