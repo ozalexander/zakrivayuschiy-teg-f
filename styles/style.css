@@ -37,7 +37,6 @@
 }
 
 .header h1 {
-  font-size: 49px;
   align-self: center;
   font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
   margin-block-end: 20px;
@@ -399,10 +398,6 @@ dialog::backdrop {
     border-inline-start: none;
     border-inline-end: none;
   }
-  .save_button {
-    flex-direction: row;
-    min-inline-size: 335px;
-  }
   .floppy {
     height: 22px;
     width: 22px;
@@ -413,6 +408,7 @@ dialog::backdrop {
   }
   .save_button {
     block-size: 55px;
+    flex-direction: row;
     min-inline-size: 335px;
   }
 }
