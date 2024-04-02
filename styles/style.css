@@ -15,32 +15,32 @@
 */
 
 .page {
-  min-inline-size: 375px;
-  min-block-size: 100dvb;
   margin: 0 auto;
   background-color: var(--background-color);
   background-image: var(--background-image);
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
+  min-inline-size: 375px;
+  min-block-size: 100dvb;
 }
 
 .header {
-  background: var(--background-color);
-  color: var(--main-color);
-  padding-block-start: 120px;
   display: flex;
   flex-direction: column;
-  font-family: "PressStart2P", sans-serif;
-  border: 2px solid var(--main-color);
-  text-transform: uppercase;
-  margin-block-end: 100px;
   margin-block-start: 100px;
+  margin-block-end: 100px;
+  border: 2px solid var(--main-color);
+  padding-block-start: 120px;
+  color: var(--main-color);
+  font-family: "PressStart2P", sans-serif;
+  text-transform: uppercase;
+  background: var(--background-color);
 }
 
 .main-title {
   align-self: center;
-  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
   margin-block-end: 20px;
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
   pointer-events: none;
 }
 
@@ -59,16 +59,16 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-size: 14px;
-  margin-block-end: 24px;
   margin-inline-start: 20px;
+  margin-block-end: 24px;
+  font-size: 14px;
 }
 
 .theme-menu__button {
-  background-color: transparent;
+  position: relative;
   border: none;
   text-transform: uppercase;
-  position: relative;
+  background-color: transparent;
 }
 
 .theme-menu__button:hover {
@@ -77,9 +77,9 @@
 }
 
 .theme-menu__button:focus-visible {
+  outline: none;
   opacity: 0.6;
   transition: 0.3s ease;
-  outline: none;
 }
 
 .theme-menu__button:disabled {
@@ -89,14 +89,14 @@
 }
 
 .theme-menu__button::before {
-  border-block-end: 1px solid var(--main-color);
-  width: 0%;
-  display: block;
+  content: "";
   position: absolute;
+  display: block;
+  width: 0%;
+  border-block-end: 1px solid var(--main-color);
+  transition: width 0.6s;
   inset-block-end: 0;
   inset-inline-start: 4px;
-  content: "";
-  transition: width 0.6s;
 }
 
 .theme-menu__button:focus-visible::before {
@@ -104,9 +104,9 @@
 }
 
 .theme-menu__button:disabled:after {
-  animation: arrow 0.5s infinite alternate ease-in-out;
   content: "▶";
   position: absolute;
+  animation: arrow 0.5s infinite alternate ease-in-out;
   inset-inline-start: -15px;
   inset-block-start: 1px;
 }
@@ -120,42 +120,42 @@
 }
 
 .content {
-  background: var(--background-color);
   color: var(--main-color);
+  background: var(--background-color);
 }
 
 .title {
   border: 2px solid var(--main-color);
+  padding: 4px 10px;
   font-size: inherit;
   min-block-size: 35px;
-  padding: 4px 10px;
   font-variation-settings: "wght" var(--font-title);
 }
 
 .wrapper {
-  border: 2px solid var(--main-color);
-  padding: 26px 26px 25px 24px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  font-variation-settings: "wght" var(--font-p);
   gap: 27px;
+  border: 2px solid var(--main-color);
+  padding: 26px 26px 25px 24px;
   line-height: 21px;
-  position: relative;
+  font-variation-settings: "wght" var(--font-p);
 }
 
 .image {
+  position: relative;
+  height: calc(100vw - 4px);
   min-height: 371px;
+  margin: 0;
   border-inline-start: 2px solid var(--main-color);
   border-inline-end: 2px solid var(--main-color);
-  height: calc(100vw - 4px);
-  position: relative;
-  margin: 0;
   padding: 0;
 }
 
 .image img {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .grayscale {
@@ -188,17 +188,17 @@
 
 .watermark {
   position: absolute;
-  inset-block-start: 23px;
-  inset-inline-end: 11px;
-  font-family: "PressStart2P", sans-serif;
   opacity: 0.5;
-  mix-blend-mode: hard-light;
+  font-family: "PressStart2P", sans-serif;
   font-size: 14px;
   text-shadow:
     -1px 0 var(--background-color),
     0 1px var(--background-color),
     1px 0 var(--background-color),
     0 -1px var(--background-color);
+  inset-block-start: 23px;
+  inset-inline-end: 11px;
+  mix-blend-mode: hard-light;
 }
 
 @supports ((text-stroke: var(--webkit-text-stroke-width) (--webkit-text-stroke-color)) or
@@ -213,17 +213,17 @@
 }
 
 .button {
+  border: 2px solid var(--main-color);
+  outline: none;
+  color: var(--main-color);
   font-family: "PressStart2P", sans-serif;
   font-size: 14px;
-  color: var(--main-color);
-  outline: none;
-  background-size: 200%;
   background-image: linear-gradient(
     to right,
     var(--background-color) 50%,
     var(--main-color) 50%
   );
-  border: 2px solid var(--main-color);
+  background-size: 200%;
   transition: 0.5s ease-in-out;
 }
 
@@ -237,24 +237,24 @@
 
 .button__text {
   color: var(--background-color);
-  mix-blend-mode: var(--blend);
   filter: var(--filter);
+  mix-blend-mode: var(--blend);
 }
 
 .controls {
   display: flex;
   justify-content: end;
-  block-size: 38px;
   gap: 7px;
   margin-block-start: -3px;
+  block-size: 38px;
 }
 
 .card__icon-button {
-  background-color: transparent;
-  outline: none;
-  height: 38px;
   width: 38px;
+  height: 38px;
   border: 2px solid transparent;
+  outline: none;
+  background-color: transparent;
 }
 
 .like-icon {
@@ -288,8 +288,8 @@
 }
 
 .like-icon:hover .core {
-  transition: 0.3s;
   fill: var(--main-color);
+  transition: 0.3s;
 }
 
 .like-icon:active .main-body {
@@ -298,8 +298,8 @@
 }
 
 .like-icon:active .core {
-  transition: 0.3s;
   fill: var(--heart_sparks);
+  transition: 0.3s;
 }
 
 .like-icon.is-liked .main-body {
@@ -308,13 +308,13 @@
 }
 
 .like-icon.is-liked .core {
-  transition: 0.3s;
   fill: var(--heart_sparks);
+  transition: 0.3s;
 }
 
 .like-icon.is-liked .contour {
-  transition: 0.3s 0.06s;
   fill: var(--heart_sparks);
+  transition: 0.3s 0.06s;
 }
 
 .like-icon.is-liked .heart {
@@ -339,36 +339,36 @@
 }
 
 .save_button {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  color: var(--main-color);
+  background-color: transparent;
   block-size: 84px;
   min-inline-size: 308px;
-  position: relative;
-  background-color: transparent;
-  color: var(--main-color);
 }
 
 .save_button .floppy {
-  padding-top: 0;
   width: 10%;
   height: 36%;
+  padding-top: 0;
 }
 
 .dialog-article {
-  padding-bottom: 102px;
   display: flex;
   justify-content: center;
+  padding-bottom: 102px;
   background-color: transparent;
 }
 
 .dialog {
   min-width: 341px;
-  background-color: var(--background-color);
-  padding: 31px 40px;
   border: 2px solid var(--main-color);
+  padding: 31px 40px;
+  background-color: var(--background-color);
 }
 
 .dialog[open] {
@@ -376,8 +376,8 @@
 }
 
 .dialog-content {
-  gap: 20px;
   display: flex;
+  gap: 20px;
 }
 
 .dialog::backdrop {
@@ -394,20 +394,20 @@
 }
 
 .dialog-button {
+  position: relative;
   width: 100%;
   height: 38px;
-  position: relative;
-  background-color: transparent;
-  color: var(--main-color);
   margin-top: 30px;
+  color: var(--main-color);
+  background-color: transparent;
 }
 
 .floppy {
-  height: 100%;
-  mix-blend-mode: difference;
-  color: var(--floppy-color);
   width: 37%;
+  height: 100%;
   padding-top: 11px;
+  color: var(--floppy-color);
+  mix-blend-mode: difference;
 }
 
 @media (width>=696px) {
@@ -447,8 +447,8 @@
   }
 
   .save_button {
-    block-size: 55px;
     flex-direction: row;
+    block-size: 55px;
     min-inline-size: 339px;
   }
 }
