@@ -366,6 +366,8 @@
 
 .dialog {
   min-width: 341px;
+  width: 355px;
+  padding: 29px 29px;
   border: 2px solid var(--main-color);
   padding: 31px 40px;
   background-color: var(--background-color);
@@ -439,11 +441,6 @@
 
   .wrapper {
     padding: 26px 24px 25px 24px;
-  }
-  
-  .dialog {
-    width: 355px;
-    padding: 29px 29px;
   }
 
   .save_button {
