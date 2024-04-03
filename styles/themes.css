@@ -5,7 +5,6 @@
         --font-title: 785;
         --font-p: 465;
         --background-image: repeating-linear-gradient(to right, var(--background-color) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--background-color) 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
-        --filter: invert(43%) sepia(84%) saturate(1175%) hue-rotate(92deg) brightness(105%) contrast(105%);
         --floppy-color: #00CC14;
         --webkit-text-stroke-width: 0;
         --webkit-text-stroke-color: transparent;
@@ -18,7 +17,6 @@
     --font-title: 700;
     --font-p: 400;
     --background-image: repeating-linear-gradient(to right, var(--background-color) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--background-color) 0 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-    --filter: none;
     --floppy-color: #FFF;
     --webkit-text-stroke-width: 0.5px;
     --webkit-text-stroke-color: #FFF;
@@ -30,7 +28,6 @@
     --font-title: 785;
     --font-p: 465;
     --background-image: repeating-linear-gradient(to right, var(--background-color) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--background-color) 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
-    --filter: invert(43%) sepia(84%) saturate(1175%) hue-rotate(92deg) brightness(105%) contrast(105%);
     --floppy-color: #00CC14;
     --webkit-text-stroke-width: 0;
     --webkit-text-stroke-color: transparent;

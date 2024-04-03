@@ -225,7 +225,7 @@
 }
 
 .button__text {
-  filter: var(--filter);
+  color: var(--floppy-color);
   mix-blend-mode: difference;
 }
 
